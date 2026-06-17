@@ -1,11 +1,19 @@
 import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Landing from './pages/landing'
 
 export default function App() {
 
+  let router = createBrowserRouter([
+    {
+      path:"/",element:<Landing/>
+    },
+   
+  ])
+
   return (
     <div>
-     <h1>this is a testing time</h1>
+     <RouterProvider router={router}/>
     </div>
   )
 }
